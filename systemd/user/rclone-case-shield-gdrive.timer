@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Case Shield Google Drive sync every 3 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=3min
+Unit=rclone-case-shield-gdrive.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target

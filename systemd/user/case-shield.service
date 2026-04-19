@@ -1,0 +1,14 @@
+[Unit]
+Description=Case Shield Document Pipeline (Mint User Service)
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/case_shield.sh
+Restart=always
+RestartSec=3
+WorkingDirectory=%h
+Environment=HOME=%h
+
+[Install]
+WantedBy=default.target

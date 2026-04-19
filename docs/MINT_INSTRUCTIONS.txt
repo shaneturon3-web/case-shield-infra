@@ -1,0 +1,39 @@
+MINT CASE SHIELD DAILY USE
+
+1. Put new files in:
+/home/shane/Inbox_Genius
+
+Optional watched subfolders:
+/home/shane/Inbox_Genius/Google_Drive_Inbox
+/home/shane/Inbox_Genius/Gmail_Inbox
+
+2. Review outputs in:
+/home/shane/Case_Vault
+
+3. Main files:
+/home/shane/Case_Vault/logs/Master_Timeline.csv
+/home/shane/Case_Vault/logs/Master_File.md
+/home/shane/Case_Vault/logs/processing.log
+/home/shane/Case_Vault/logs/warnings.log
+/home/shane/Case_Vault/logs/extraction_failures.log
+
+4. Services:
+case-shield.service
+rclone-case-shield-gdrive.timer
+case-shield-gmail.timer
+
+5. Restart if needed:
+systemctl --user restart case-shield.service
+systemctl --user restart rclone-case-shield-gdrive.timer
+systemctl --user restart case-shield-gmail.timer
+
+6. Google Drive:
+Create or copy:
+/home/shane/.config/rclone/rclone.conf
+/home/shane/.config/case-shield/gdrive.env
+
+7. Gmail:
+Current bootstrap installs a scaffold. Full Gmail ingestion still needs API OAuth/credentials if not already configured.
+
+8. Thunderbird:
+Installed for review/export/archive. Not the ingestion engine.
